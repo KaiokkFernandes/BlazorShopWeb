@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace BlazorShop.Models.DTOs
 {
-    internal class ProdutoDto
+     public class ProdutoDto
     {
         public int Id { get; set; }
         public string ? Nome { get; set; }
-        public string ? Descrição { get; set; }
+        public string ? Descricao { get; set; }
         public string ImagemUrl { get; set; }
         public decimal Preco { get; set; }
         public int Quantidade { get; set; }
