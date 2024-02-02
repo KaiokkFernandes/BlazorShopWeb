@@ -1,14 +1,12 @@
 ﻿using BlazorShop.Api.Entities;
-using System.Data.SqlTypes;
 
-namespace BlazorShop.Api.Repositories
+namespace BlazorShop.Api.Repositories;
+
+public interface IProdutoRepository
 {
-    public interface IProdutoRepository
-    {
-        Task<IEnumerable<Produto>> GetItens();
-        Task<Produto> GetItens(int id);
+    Task<IEnumerable<Produto>> GetItens();
+    Task<Produto> GetItem(int id);
 
-        Task<IEnumerable<Produto>> GetItensPorCategorias(int id); 
-        Task<IEnumerable<Categoria>> GetCategorias();   
-    }
+    Task<IEnumerable<Produto>> GetItensPorCategoria(int id);
+    Task<IEnumerable<Categoria>> GetCategorias();
 }
