@@ -19,6 +19,11 @@ namespace BlazorShop.Api.Repositories
             throw new NotImplementedException();
         }
 
+        public Task<Produto> GetItem(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async  Task<Produto> GetItens(int id)
         {
             var produto = await _context.Produtos
@@ -35,6 +40,11 @@ namespace BlazorShop.Api.Repositories
                           .ToListAsync();
 
             return produtos;
+        }
+
+        public Task<IEnumerable<Produto>> GetItensPorCategoria(int id)
+        {
+            throw new NotImplementedException();
         }
 
         public async Task<IEnumerable<Produto>> GetItensPorCategorias(int id)
